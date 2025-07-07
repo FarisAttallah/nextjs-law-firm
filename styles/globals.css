@@ -1,0 +1,225 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700&family=Amiri:wght@400;700&display=swap');
+
+:root {
+  --primary-gold: #D4AF37;
+  --primary-navy: #1a2332;
+  --secondary-navy: #2c3e50;
+  --warm-white: #fafafa;
+  --elegant-gray: #6b7280;
+  --light-gold: #f7f3e9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  line-height: 1.6;
+  color: var(--primary-navy);
+  background-color: var(--warm-white);
+}
+
+/* Arabic font support */
+[dir="rtl"] {
+  font-family: 'Cairo', 'Source Sans Pro', sans-serif;
+}
+
+[dir="rtl"] .font-serif {
+  font-family: 'Amiri', 'Playfair Display', serif;
+}
+
+/* RTL specific styles */
+.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+.ltr {
+  direction: ltr;
+  text-align: left;
+}
+
+/* RTL spacing adjustments */
+[dir="rtl"] .space-x-8 > * + * {
+  margin-left: 0;
+  margin-right: 2rem;
+}
+
+[dir="rtl"] .space-x-4 > * + * {
+  margin-left: 0;
+  margin-right: 1rem;
+}
+
+[dir="rtl"] .mr-4 {
+  margin-right: 0;
+  margin-left: 1rem;
+}
+
+[dir="rtl"] .mr-2 {
+  margin-right: 0;
+  margin-left: 0.5rem;
+}
+
+/* RTL flex adjustments */
+[dir="rtl"] .flex {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .justify-between {
+  flex-direction: row;
+}
+
+[dir="rtl"] .items-center {
+  flex-direction: row;
+}
+
+.font-serif {
+  font-family: 'Playfair Display', serif;
+}
+
+.text-gold {
+  color: var(--primary-gold);
+}
+
+.bg-gold {
+  background-color: var(--primary-gold);
+}
+
+.bg-navy {
+  background-color: var(--primary-navy);
+}
+
+.bg-secondary-navy {
+  background-color: var(--secondary-navy);
+}
+
+.bg-light-gold {
+  background-color: var(--light-gold);
+}
+
+.bg-warm-white {
+  background-color: var(--warm-white);
+}
+
+.border-gold {
+  border-color: var(--primary-gold);
+}
+
+.hover-gold:hover {
+  color: var(--primary-gold);
+}
+
+.elegant-shadow {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.hero-pattern {
+  background-image: 
+    linear-gradient(45deg, rgba(212, 175, 55, 0.1) 25%, transparent 25%), 
+    linear-gradient(-45deg, rgba(212, 175, 55, 0.1) 25%, transparent 25%), 
+    linear-gradient(45deg, transparent 75%, rgba(212, 175, 55, 0.1) 75%), 
+    linear-gradient(-45deg, transparent 75%, rgba(212, 175, 55, 0.1) 75%);
+  background-size: 60px 60px;
+  background-position: 0 0, 0 30px, 30px -30px, -30px 0px;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom focus styles */
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary-gold);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+/* Gradient text effects */
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary-gold), #f4d03f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Elegant hover effects */
+.elegant-hover {
+  transition: all 0.3s ease;
+}
+
+.elegant-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Typography improvements */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: var(--primary-gold);
+  color: var(--primary-navy);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #b8941f;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+}
+
+/* Animation for elements coming into view */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.75rem; }
+  h4 { font-size: 1.5rem; }
+}
+
+/* Professional dividers */
+.elegant-divider {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-gold), transparent);
+  margin: 2rem auto;
+  border-radius: 2px;
+}
