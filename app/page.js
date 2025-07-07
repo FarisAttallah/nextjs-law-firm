@@ -570,7 +570,7 @@ export default function Home() {
                         <LegalIcons.Shield className="w-8 h-8 text-gold" />
                       </div>
                       <h4 className="text-xl font-serif font-bold text-logo-green mb-4">{currentContent.practice.familyLaw.title}</h4>
-                      <p className="text-gray-600 text-sm">Click to learn more...</p>
+                      <p className="text-gray-800 text-sm font-medium">Click to learn more...</p>
                     </div>
                   </div>
                   <div className="flip-card-back bg-gradient-to-br from-secondary-navy via-logo-green to-primary-navy p-6 text-white shadow-2xl">
@@ -596,7 +596,7 @@ export default function Home() {
                         <LegalIcons.Gavel className="w-8 h-8 text-gold" />
                       </div>
                       <h4 className="text-xl font-serif font-bold text-logo-green mb-4">{currentContent.practice.criminalDefense.title}</h4>
-                      <p className="text-gray-600 text-sm">Click to learn more...</p>
+                      <p className="text-gray-800 text-sm font-medium">Click to learn more...</p>
                     </div>
                   </div>
                   <div className="flip-card-back bg-gradient-to-br from-secondary-navy via-logo-green to-primary-navy p-6 text-white shadow-2xl">
@@ -622,7 +622,7 @@ export default function Home() {
                         <LegalIcons.Building className="w-8 h-8 text-gold" />
                       </div>
                       <h4 className="text-xl font-serif font-bold text-logo-green mb-4">{currentContent.practice.businessLaw.title}</h4>
-                      <p className="text-gray-600 text-sm">Click to learn more...</p>
+                      <p className="text-gray-800 text-sm font-medium">Click to learn more...</p>
                     </div>
                   </div>
                   <div className="flip-card-back bg-gradient-to-br from-secondary-navy via-logo-green to-primary-navy p-6 text-white shadow-2xl">
